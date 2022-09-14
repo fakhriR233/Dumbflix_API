@@ -7,8 +7,8 @@ type FilmResponse struct {
 	Title				string						`json:"title" form:"title" gorm:"type: varchar(255)"`
 	ThumbnailFilm		string						`json:"thumbnailfilm" form:"thumbnailfilm" gorm:"type:text"`
 	Year				int							`json:"year" form:"year" gorm:"type: int"`
+	CategoryID 			int                			`json:"-"`
 	Category   			models.CategoryResponse    	`json:"category"`
-	CategoryID 			int                			`json:"category_id" gorm:"foreignKey:CategoryID"`
 	Description			string						`json:"description" form:"description" gorm:"type:text"`
 }
 
